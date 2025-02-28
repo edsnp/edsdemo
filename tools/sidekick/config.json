@@ -15,7 +15,7 @@
         "isContainer": true
       },
       {
-        "containderId": "tools",
+        "containerId": "tools",
         "id": "localize",
         "title": "Localize",
         "environments": ["edit", "preview", "live", "prod"],
