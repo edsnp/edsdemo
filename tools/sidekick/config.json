@@ -1,0 +1,25 @@
+{
+    "project": "AEM EDS Demo",
+    "plugins": [
+      {
+        "id": "youtube",
+        "title": "YouTube",
+        "environments": ["edit", "preview", "live", "prod"],
+        "url": "https://www.youtube.com/watch?v=DvBRj--sUMU",
+        "exclude_paths": ["**/en/**"],
+        "include_paths": ["**/en/us/**"]
+      },
+      {
+        "id": "tools",
+        "title": "Tools",
+        "isContainer": true
+      },
+      {
+        "containderId": "tools",
+        "id": "localize",
+        "title": "Localize",
+        "environments": ["edit", "preview", "live", "prod"],
+        "url": "https://www.microsoft.com/en-us/translator/business/translator-api/"
+      }
+    ]
+  }

@@ -11,6 +11,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata,
 } from './aem.js';
 
 /**
@@ -72,7 +73,13 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  const langMeta = getMetadata('locale');
+  if(langMeta) {
+    document.documentElement.lang = langMeta;
+  } else {
+    document.documentElement.lang = 'en';
+  }
+  
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
